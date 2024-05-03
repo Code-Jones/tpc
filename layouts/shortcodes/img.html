@@ -1,8 +1,8 @@
 {{ $name := .Get "src" }}
-{{ $extention := .Get "ext" | default "jpg" }}
+{{ $extension := .Get "ext" | default "jpg" }}
 {{ $alt := .Get "alt" }}
 {{ $width := .Get "width" | default "auto" }}
-{{ $minipath := printf "/posts/%s/%s.%s" .Page.File.ContentBaseName $name $extention }}
+{{ $minipath := printf "/posts/%s/%s.%s" .Page.File.ContentBaseName $name $extension }}
 {{ $path := printf "content%s.webp" $minipath }}
 {{- if (fileExists $path) -}}
 <picture>

@@ -13,4 +13,3 @@ Our guidance covers a wide range of areas, including project planning, risk mana
 Choosing Terrace Point Consulting Group means gaining a partner who is committed to your project's success. We provide not just oversight, but a deep engagement with your team, sharing knowledge and experiences that empower your project and enhance its outcomes. Let us help you turn challenges into opportunities with our expert guidance and comprehensive support.
 
 
-{{ $image := .Resources.Get "eddie.jpg" }}
