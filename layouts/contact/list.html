@@ -1,0 +1,102 @@
+
+
+{{ define "main" }}
+<div>
+    <div class="hero min-h-screen bg-base-200">
+        <div class="hero-content flex-col lg:flex-row-reverse">
+            <div class="text-center lg:text-left">
+                <h1 class="text-5xl font-bold">{{ .Params.contentTitle }}</h1>
+                <p class="py-6">{{ .Content }}
+                </p>
+                <p class="py-4">You can also send an email to <a href="mailto:{{ .Params.email }}"><strong>{{ .Params.email }}</strong></a>.</p>
+            </div>
+            <div class="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                <form class="card-body" id="contact">
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">Name</span>
+                        </label>
+                        <input type="text" id="name" placeholder="Name" class="input input-bordered" required />
+                    </div>
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">Email</span>
+                        </label>
+                        <input type="email" id="email" placeholder="Email" class="input input-bordered" required />
+                    </div>
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">Message</span>
+                        </label>
+                        <textarea rows="5" cols="30" id="message" placeholder="Message" name="message"
+                            class="p-4 bg-gray-200 border border-gray-200 focus:outline-none focus:bg-white focus:border-gray-500"
+                            required>
+                        </textarea>
+                    </div>
+                    <div class="form-control mt-6">
+                        <button class="btn btn-primary" type="submit">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    document.getElementById('contact').addEventListener('submit', (event) => {
+        event.preventDefault();
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var message = document.getElementById('message').value;
+
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        const onlyLettersRegex = /^[a-zA-Z\s]*$/;
+        const onlyLettersAndNumbersRegex = /^[a-zA-Z0-9\s]*$/;
+
+        if (email === '' || !emailRegex.test(email)) {
+            alert('Please enter a valid email address');
+            return;
+        }
+
+        if (name === '' || message === '') {
+            alert('Please fill in all fields');
+            return;
+        }
+
+        if (!onlyLettersRegex.test(name)) {
+            alert('Name can only contain letters');
+            return;
+        }
+
+        if (!onlyLettersAndNumbersRegex.test(message)) {
+            alert('Message can only contain letters');
+            return;
+        }
+
+        console.log(name, email, message);
+
+        // send to serverless
+        fetch('https://basic-bundle-delicate-truth-6afc.mdjones1793.workers.dev/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                name: name,
+                email: email,
+                message: message
+            })
+        }).then((response) => {
+            return response.json();
+        }).then((data) => {
+            console.log(data);
+            alert('Message sent successfully');
+        }).catch((error) => {
+            console.error('Error:', error);
+            alert('An error occurred. Please try again later');
+        });
+    })
+</script>
+{{ end }}
+

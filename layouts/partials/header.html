@@ -1,5 +1,5 @@
 <header>
-    <nav class="flex items-center justify-between flex-wrap bg-opacity-100 shadow-xl">
+    <nav class="flex items-center justify-between flex-wrap bg-opacity-100 shadow-md">
         <div class="flex items-center flex-shrink-0 text-xl text-grey-900 mr-6">
             <a href="{{ .Site.BaseURL }}">
                 <img alt="{{ .Site.Params.logo.alt }}" class="h-40 mr-3" src="{{ .Site.Params.logo.main | relURL }}">
@@ -17,7 +17,7 @@
                 {{ end }}
             </div>
         </div>
-        <div class="block lg:hidden">
+        <div class="block md:hidden mr-10">
             <div class="dropdown dropdown-left">
                 <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"

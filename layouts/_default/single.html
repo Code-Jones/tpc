@@ -35,9 +35,9 @@
 
 {{ define "main" }}
 
-<div class="container prose md:prose-lg lg:prose-xl max-w-none min-h-[61.95vh]">
+<div class="container prose md:prose-lg lg:prose-xl ">
     {{ if or (in .Permalink "/services/") (in .Permalink "/portfolio/") }}
-    <div class="p-20">
+    <div class="p-5 md:p-20">
         {{ .Content}}
         {{ with .Params.img }}
         <img src="{{ . | absURL }}" alt="{{ . }}" class="w-full h-auto" />

@@ -1,11 +1,14 @@
 ## Todo List
 
 - [X] Fix images
-- [ ] Add dns to domain
+- [X] Add dns to domain
 - [X] Add readme instructions
 - [ ] Add layout for about page
-- [ ] Keep footer on bottom of page
-- [ ] Style list pages more
+- [X] Keep footer on bottom of page
+- [X] Style list pages more
+- [ ] Contact form
+- [ ] Captcha
+
 
 ## Markdown
 This site give the basic syntax for markdown.

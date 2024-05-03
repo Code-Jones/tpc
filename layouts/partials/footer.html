@@ -1,4 +1,4 @@
-<footer class="footer footer-center p-10 bg-tlgray-700 text-white  rounded">
+<footer class="footer footer-center p-5 gap-6 bg-tlgray-700 text-white rounded-t">
   <nav class="grid grid-flow-col gap-4">
     {{ range .Site.Menus.main }}
     <a class="link link-hover" href="{{ .URL | safeURL }}">{{ .Name }}</a>
@@ -38,7 +38,7 @@
     </div>
   </nav>
   <aside>
-    <p>Copyright © {{ now.Year }} - All right reserved by {{site.Title}}</p>
+    <p class="text-white ">Copyright © {{ now.Year }} - All right reserved by {{site.Title}}</p>
   </aside>
   {{ if .Site.Params.googleFonts }}
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet" />

@@ -17,6 +17,20 @@
         /* Firefox */
     }
 
+    .main {
+        display: block;
+        min-height: 81svh;
+    }
+
+    html, body {
+        height: 100%;
+    }
+
+    footer, .main::after {
+        display: block;
+        clear: both;
+    }
+
     h1 {
         font-size: 3.75rem;
         line-height: 1;
