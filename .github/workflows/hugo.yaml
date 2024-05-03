@@ -50,8 +50,6 @@ jobs:
         uses: actions/configure-pages@v4
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
-      - name: Copy static files
-        run: cp -R static/ public/
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
@@ -62,7 +60,9 @@ jobs:
           hugo \
             --gc \
             --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"          
+            --baseURL "${{ steps.pages.outputs.base_url }}/"
+      - name: Copy static files
+        run: cp -R static/ public/          
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
