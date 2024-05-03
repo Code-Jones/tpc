@@ -1,7 +1,7 @@
 +++
 title = 'Welding'
 date = 2024-05-01T12:57:09-06:00
-img = '/img/redline.jpg'
+img = 'img/redline.jpg'
 +++
 
 # Welding Inspections
