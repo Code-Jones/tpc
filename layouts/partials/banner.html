@@ -3,9 +3,9 @@
         <img src="/img/extra/eddie.jpg" alt="Founder Welding" class="w-96 rounded-lg shadow-2xl" />
         {{ $ss := .Site.Data.images }}
         {{ range $e := $ss}}
-        {{ if $e.id == "eddie" }}
-        <img src="{{ .src}}" alt="{{ .alt }}" />
-        {{ end }}
+        {{ if eq $e.id "eddie" }}
+                <img src="{{ .src}}" alt="{{ .alt }}" />
+            {{ end }}
         {{ end }}
         <img src="img/extra/eddie.jpeg" alt="Founder Welding" class="w-96 rounded-lg shadow-2xl" />
         <img src="{{ "img/extra/eddie.jpg" | absURL }}" alt="Founder Welding" class="w-96 rounded-lg shadow-2xl" />
