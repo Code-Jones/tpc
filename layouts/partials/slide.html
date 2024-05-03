@@ -3,7 +3,7 @@
     {{ range $i, $e := $ss}}
     <div class="mySlides fade">
         <img src="{{ .image }}" class="w-full">
-        <div class="hidden sm:block md:text-6xl sm:text-3xl lg:text-9xl px-8 py-12 glass rounded-box text-center absolute bottom-32 
+        <div class="hidden sm:block md:text-6xl sm:text-3xl lg:text-6xl px-8 py-12 glass rounded-box text-center absolute bottom-32 
         left-32 {{ or .color " text-white" }}">
             {{ .title }}
         </div>
