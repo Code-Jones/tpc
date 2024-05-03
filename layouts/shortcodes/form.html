@@ -1,0 +1,39 @@
+<div class="hero min-h-screen bg-base-200">
+    <div class="hero-content flex-col lg:flex-row-reverse">
+        <div class="text-center lg:text-left">
+            <h1 class="text-5xl font-bold">Get in contact</h1>
+            <p class="py-6">Feel free to reach out to us for any questions. We'll get back to you as soon as possible.
+            </p>
+            <p class="py-4">You can also send an email to <a
+                    href="mailto:info@example.com"><strong>info@example.com</strong></a>.</p>
+        </div>
+        <div class="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+            <form class="card-body" name="contact" action="https://getform.io/" method="POST">
+                <div class="form-control">
+                    <label class="label">
+                        <span class="label-text">Name</span>
+                    </label>
+                    <input type="text" placeholder="Name" class="input input-bordered" required />
+                </div>
+                <div class="form-control">
+                    <label class="label">
+                        <span class="label-text">Email</span>
+                    </label>
+                    <input type="email" placeholder="Email" class="input input-bordered" required />
+                </div>
+                <div class="form-control">
+                    <label class="label">
+                        <span class="label-text">Message</span>
+                    </label>
+                    <textarea rows="5" cols="30" placeholder="Message" name="message"
+                        class="p-4 bg-gray-200 border border-gray-200 focus:outline-none focus:bg-white focus:border-gray-500"
+                        required>
+                    </textarea>
+                </div>
+                <div class="form-control mt-6">
+                    <button class="btn btn-primary" type="submit">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+[
+    {
+        "company": "Trans Canada",
+        "url": "https://www.transcanadapipeline.com/",
+        "img": "img/external/tce-energy-en.svg",
+        "alt": "Trans Canada Logo",
+        "review": "TransCanada is a leading North American energy infrastructure company that transports more than 25% of North America’s daily natural gas and crude oil supply. They are committed to delivering energy in a safe and responsible manner."
+    },
+    {
+        "company": "Enbridge",
+        "url": "https://www.enbridge.com/",
+        "img": "img/external/enb-logo.svg",
+        "alt": "Enbridge Logo",
+        "review": "Enbridge is a leading North American energy infrastructure company that transports more than 25% of North America’s daily natural gas and crude oil supply. They are committed to delivering energy in a safe and responsible manner."
+    },
+    {
+        "company": "Flint",
+        "url": "https://flintcorp.com/",
+        "img": "img/external/flint-logo.jpg",
+        "alt": "Trans Canada Logo",
+        "review": "Flint is a leading North American energy infrastructure company that transports more than 25% of North America’s daily natural gas and crude oil supply. They are committed to delivering energy in a safe and responsible manner."
+    }
+]

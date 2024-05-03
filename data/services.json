@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Project Management",
+    "description": "Tell them wrench monkeys what to do",
+    "link": "/services/project-management"
+  },
+  {
+    "title": "Welding Inspection",
+    "description": "Make sure the welds are good",
+    "link": "/services/welding"
+  },
+  {
+    "title": "Structural Inspection",
+    "description": "Make sure the structure is good",
+    "link": "/services/structural"
+  },
+  {
+    "title": "Civil Inspection",
+    "description": "Make sure the civil stuff is good",
+    "link": "/services/civil"
+  },
+  {
+    "title": "Quality Assurance",
+    "description": "Make sure the quality is good",
+    "link": "/services/quality"
+  },
+  {
+    "title": "Guidance",
+    "description": "Unsure if a planned project is feasible or not? We provide preliminary feasibility assessments based on industry standards & practical experience.",
+    "link": "/services/guidance"
+  }
+]

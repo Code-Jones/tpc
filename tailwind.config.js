@@ -1,5 +1,10 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./**/*.html", "./**/*.md", "./config.toml"],
+  content: ["./**/*.html", "./**/*.md"],
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('daisyui'),
+  ],
   theme: {
     extend: {
       colors: {
@@ -12,6 +17,7 @@ module.exports = {
       }
     }
   },
-  variants: {},
-  plugins: [require("@tailwindcss/typography")],
+  daisyui: {
+    themes: ["light", "dark", "emerald"],
+  },
 };

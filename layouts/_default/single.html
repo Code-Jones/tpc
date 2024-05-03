@@ -1,0 +1,54 @@
+{{ define "meta_tags" }}
+
+<meta property="og:site_name" content="{{ .Site.Title }}" />
+<meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta name="twitter:card" content="summary_large_image">
+<meta property="twitter:title" content="{{ .Title }}">
+
+{{ if .Params.image }}
+{{ with .Params.image }}
+<meta property="og:image" content="{{ . | absURL }}">
+{{ end }}
+{{ else }}
+<meta property="og:image" content="{{ .Site.Params.homepage_meta_tags.meta_og_image | absURL }}">
+{{ end }}
+
+{{- if .Description }}
+<meta name="description" content="{{ .Description }}" />
+<meta property="og:description" content="{{ .Description }}" />
+<meta property="twitter:description" content="{{ .Description }}" />
+{{- else if .Summary }}
+<meta name="description" content="{{ .Summary }}" />
+<meta property="og:description" content="{{ .Summary }}" />
+<meta property="twitter:description" content="{{ .Summary }}" />
+{{- else if .Site.Params.description }}
+<meta name="description" content="{{ .Site.Params.description }}" />
+<meta property="og:description" content="{{ .Site.Params.description }}" />
+<meta property="twitter:description" content="{{ .Site.Params.description }}" />
+{{- end }}
+
+{{ end }}
+
+
+
+{{ define "main" }}
+
+<div class="container prose md:prose-lg lg:prose-xl max-w-none min-h-[61.95vh]">
+    {{ if or (in .Permalink "/services/") (in .Permalink "/portfolio/") }}
+    <div class="p-20">
+        {{ .Content}}
+        {{ with .Params.img }}
+        <img src="{{ . | absURL }}" alt="{{ . }}" class="w-full h-auto" />
+        {{ end }}
+    </div>
+
+    {{ else }}
+    {{.Content}}
+    {{ end }}
+</div>
+</div>
+
+{{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+{{ end }}
