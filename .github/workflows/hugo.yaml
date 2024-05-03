@@ -60,9 +60,7 @@ jobs:
           hugo \
             --gc \
             --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
-      - name: Copy static files
-        run: cp -R static/ public/img/          
+            --baseURL "${{ steps.pages.outputs.base_url }}/" 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
