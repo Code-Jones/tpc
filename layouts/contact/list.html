@@ -88,10 +88,7 @@
                 message: message
             })
         }).then((response) => {
-            return response.json();
-        }).then((data) => {
-            console.log(data);
-            alert('Message sent successfully');
+            alert('Message sent successfully', response);
         }).catch((error) => {
             console.error('Error:', error);
             alert('An error occurred. Please try again later');
