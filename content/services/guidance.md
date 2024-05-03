@@ -1,7 +1,7 @@
 +++
 title = 'Guidance'
 date = 2024-05-02T21:03:41-06:00
-img = '/img/extra/eddie.jpg'
+img = "/img/extra/eddie.jpg"
 +++
 
 # Guidance and Wisdom
