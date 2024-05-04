@@ -3,10 +3,10 @@
 - [X] Fix images
 - [X] Add dns to domain
 - [X] Add readme instructions
-- [ ] Add layout for about page
+- [X] Add layout for about page
 - [X] Keep footer on bottom of page
 - [X] Style list pages more
-- [ ] Contact form
+- [X] Contact form
 - [ ] Captcha
 
 

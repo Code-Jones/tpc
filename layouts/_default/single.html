@@ -38,17 +38,24 @@
 <div class="container prose md:prose-lg lg:prose-xl ">
     {{ if or (in .Permalink "/services/") (in .Permalink "/portfolio/") }}
     <div class="p-5 md:p-20">
-        {{ .Content}}
         {{ with .Params.img }}
         <img src="{{ . | absURL }}" alt="{{ . }}" class="w-full h-auto" />
         {{ end }}
+        {{ .Content}}
+    </div>
     </div>
 
     {{ else }}
     {{.Content}}
     {{ end }}
+    <div class="flex pb-4">
+        <div class="flex-grow"></div>
+    <button type="button" class="btn-primary btn mr-10 flex-col">
+        <a href="javascript:history.go(-1)">Back</a>
+    </button>
+    </button>
+    </button>
+    </div>
 </div>
 </div>
-
-{{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
 {{ end }}

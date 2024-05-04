@@ -1,21 +1,21 @@
 [
   {
-    "title": "Image 1",
+    "title": "Pipeline Project Management",
     "image": "img/slide/slide01.jpg",
     "color": "text-black"
   },
   {
-    "title": "Sample text here...",
+    "title": "Welding Services",
     "image": "img/slide/slide02.jpg",
     "color": "text-white"
   },
   {
-    "title": "Sample text here...",
+    "title": "Civil Construction Services",
     "image": "img/slide/slide03.jpg",
     "color": "text-white"
   },
   {
-    "title": "Sample text here...",
+    "title": "Quality Assurance & Control Services",
     "image": "img/slide/slide04.jpg",
     "color": "text-white"
   }
