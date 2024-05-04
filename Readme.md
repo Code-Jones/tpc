@@ -7,7 +7,7 @@
 - [X] Keep footer on bottom of page
 - [X] Style list pages more
 - [X] Contact form
-- [ ] Captcha
+- [X] Captcha
 
 
 ## Markdown
