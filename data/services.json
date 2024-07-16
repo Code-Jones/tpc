@@ -1,38 +1,38 @@
 [
   {
     "title": "Project Management",
-    "description": "Tell them wrench monkeys what to do",
+    "description": "Expert project management services ensuring all project deliverables are met with precision and efficiency.",
     "link": "/services/project-management",
     "img": ""
   },
   {
     "title": "Welding Inspection",
-    "description": "Make sure the welds are good",
+    "description": "Comprehensive welding inspection services for all levels, both in the field and off-site.",
     "link": "/services/welding",
     "img": "/img/redline.jpg"
   },
   {
-    "title": "Structural Inspection",
-    "description": "Make sure the structure is good",
-    "link": "/services/structural",
+    "title": "Pipeline Inspection",
+    "description": "On-site inspections guaranteeing the highest quality and adherence to industry standards.",
+    "link": "/services/pipeline-inspection",
     "img": ""
   },
   {
-    "title": "Civil Inspection",
-    "description": "Make sure the civil stuff is good",
-    "link": "/services/civil",
+    "title": "Experience",
+    "description": "Leveraging over 25 years of expertise to deliver exceptional results in every project.",
+    "link": "/services/experience",
     "img": ""
   },
   {
     "title": "Quality Assurance",
-    "description": "Make sure the quality is good",
-    "link": "/services/quality",
+    "description": "Proven track record of successful project execution and effective leadership in both integrity/maintenance and new construction projects.",
+    "link": "/services/quality-assurance",
     "img": ""
   },
   {
-    "title": "Guidance",
-    "description": "Unsure if a planned project is feasible or not? We provide preliminary feasibility assessments based on industry standards & practical experience.",
-    "link": "/services/guidance",
+    "title": "Environmental Reclamation and Remediation",
+    "description": "Cost-efficient strategies for site reclamation and remediation, reducing environmental liabilities efficiently and effectively.",
+    "link": "/services/environmental-reclamation",
     "img": "/img/eddie.jpg"
   }
 ]

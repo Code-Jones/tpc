@@ -71,4 +71,14 @@
         max-width: 100%;
         height: auto;
     }
+
+    .m-6 {
+        margin: 1.5rem;
+    }
+
+
+}
+
+.test {
+    color: red;
 }

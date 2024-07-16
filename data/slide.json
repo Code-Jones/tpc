@@ -1,22 +1,22 @@
 [
   {
-    "title": "Pipeline Project Management",
-    "image": "img/slide/slide01.jpg",
+    "title": "Project Management",
+    "image": "img/external/pipeline-construction.jpg",
     "color": "text-black"
   },
   {
-    "title": "Welding Services",
-    "image": "img/slide/slide02.jpg",
+    "title": "Welding Inspection",
+    "image": "img/eddie.jpg",
     "color": "text-white"
   },
   {
-    "title": "Civil Construction Services",
-    "image": "img/slide/slide03.jpg",
+    "title": "Pipeline & Facility Construction",
+    "image": "img/external/worker.jpg",
     "color": "text-white"
   },
   {
-    "title": "Quality Assurance & Control Services",
-    "image": "img/slide/slide04.jpg",
+    "title": "Experience & Expertise",
+    "image": "img/eddie2.jpg",
     "color": "text-white"
   }
 ]

@@ -28,34 +28,54 @@
 <meta property="og:description" content="{{ .Site.Params.description }}" />
 <meta property="twitter:description" content="{{ .Site.Params.description }}" />
 {{- end }}
-
 {{ end }}
 
 
 
 {{ define "main" }}
-
-<div class="container prose md:prose-lg lg:prose-xl ">
-    {{ if or (in .Permalink "/services/") (in .Permalink "/portfolio/") }}
-    <div class="p-5 md:p-20">
-        {{ with .Params.img }}
-        <img src="{{ . | absURL }}" alt="{{ . }}" class="w-full h-auto" />
-        {{ end }}
+{{ if or (in .Permalink "/services/") (in .Permalink "/portfolio/") }}
+<div class="m-5 md:prose md:prose-lg lg:prose-xl order p-5 md:p-20 lg:flex">
+    <div class="content">
         {{ .Content}}
     </div>
+    <div class="p-5">
+        {{ with .Params.img }}
+        <img src="{{ . | absURL }}" alt="{{ . }}" class=" w-full h-auto" />
+        {{ end }}
     </div>
+</div>
 
-    {{ else }}
-    {{.Content}}
-    {{ end }}
-    <div class="flex pb-4">
-        <div class="flex-grow"></div>
+{{ else }}
+{{.Content}}
+{{ end }}
+<div class="flex pb-4">
+    <div class="flex-grow"></div>
     <button type="button" class="btn-primary btn mr-10 flex-col">
         <a href="javascript:history.go(-1)">Back</a>
     </button>
     </button>
     </button>
-    </div>
 </div>
-</div>
+<style>
+    .order {
+        display: flex;
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column-reverse;
+
+        }
+
+        ;
+    }
+
+    .content {
+        padding: 2rem;
+
+        h1,
+        h2,
+        h3 {
+            margin: 2rem 0;
+        }
+    }
+</style>
 {{ end }}

@@ -1,9 +1,9 @@
-<div class="w-full relative m-auto ">
+<div class="w-full relative m-auto">
     {{ $ss := .Site.Data.slide }}
     {{ range $i, $e := $ss}}
     <div class="mySlides fade">
         <img src="{{ .image }}" class="w-full">
-        <div class=" md:text-6xl sm:text-3xl lg:text-6xl p-2 md:px-8 md:py-12 glass rounded-box text-center absolute md:bottom-16 lg:bottom-32 bottom-8 
+        <div class="md:text-6xl sm:text-2xl lg:text-5xl p-2 md:px-8 md:py-10 glass rounded-box text-center absolute md:bottom-16 lg:bottom-32 bottom-8 
         left-8 md:left-16 lg:left-32 {{ or .color " text-white" }}">
             {{ .title }}
         </div>
