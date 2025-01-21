@@ -1,6 +1,7 @@
 import { MapContainer, Popup, TileLayer } from 'react-leaflet'
 import { Marker } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
+import L from 'leaflet';
 
 interface Markers {
     desc: string;
@@ -50,6 +51,14 @@ const Markers: Markers[] = [
     { desc: "Nipigon, Integrity Digs", lat: 49.0157, long: -88.2683 }
 ];
 
+// @ts-ignore
+delete L.Icon.Default.prototype._getIconUrl;
+L.Icon.Default.mergeOptions({
+    iconRetinaUrl: new URL('leaflet/dist/images/marker-icon-2x.png', import.meta.url).toString(),
+    iconUrl: new URL('leaflet/dist/images/marker-icon.png', import.meta.url).toString(),
+    shadowUrl: new URL('leaflet/dist/images/marker-shadow.png', import.meta.url).toString(),
+});
+
 const Map = () => {
 
 
@@ -78,12 +87,5 @@ const Map = () => {
 };
 
 export default Map;
-
-{/* <iframe
-    width="100%"
-    height="600px"
-    frameborder="0"
-    src="https://umap.openstreetmap.fr/fr/map/anonymous-edit/1094324:CskcRn0hwz7gBjG3d4wA9zgbebbLPeMIlhU1KGyjvYM?scaleControl=false&miniMap=true&scrollWheelZoom=true&zoomControl=false&allowEdit=false&moreControl=false&searchControl=true&tilelayersControl=null&embedControl=false&datalayersControl=null&onLoadPanel=none&captionBar=false&fullscreenControl=null#4/51.529/-98.492"
-></iframe> */}
 
 

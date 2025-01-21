@@ -9,7 +9,7 @@ interface Favicon {
   sizes: number[];
 }
 
-const sizes = [192, 512];
+const sizes = [234, 50];
 const favicons: Favicon[] = [
   {
     purpose: 'any',
