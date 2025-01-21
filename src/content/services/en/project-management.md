@@ -5,8 +5,8 @@ main:
   id: 1
   content: |
    At Terrace Point Consulting Group, we understand that successful project management is the cornerstone of any construction or environmental initiative. Our dedicated team provides tailored management solutions that align with your project goals. From initial concept to final handover, we meticulously plan and execute every phase, ensuring timelines, budgets, and quality expectations are met. With a focus on proactive risk management and efficient resource utilization, we help you navigate challenges and achieve exceptional results with confidence.
-  imgCard: "@/images/product-image-1.avif"
-  imgMain: "@/images/product-image-main-1.avif"
+  imgCard: "@/images/new/pm.jpg"
+  imgMain: "@/images/new/pm.jpg"
   imgAlt: "Project management process overview"
 tabs:
   - id: "tabs-with-card-item-1"
