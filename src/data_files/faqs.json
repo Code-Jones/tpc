@@ -1,0 +1,81 @@
+{
+  "subTitle": "Ask us anything about our brand and products, and we'll do our best to provide the answers you need.",
+  "faqs": [
+    {
+      "question": "Can we work across Canada and the United States?",
+      "answer": "While based in Alberta Canada, we are authorized to work in all provinces and territories across the country. We also work authorized to work within United States to provide service across north america."
+    },
+    {
+      "question": "What industries does Terrace Point Consulting Group serve?",
+      "answer": "We specialize in supporting the pipeline, structural, process piping, and civil construction industries. With over 25 years of experience, we’ve worked on projects of all sizes, partnering with industry leaders like TC Energy, Enbridge, and Cenovus."
+    },
+    {
+      "question": "How does Terrace Point Consulting ensure quality and safety on projects?",
+      "answer": "Quality and safety are at the heart of everything we do. Our team provides comprehensive QA/QC services, detailed documentation, and expert oversight to ensure all work meets or exceeds industry standards. From project planning to execution, we’re committed to delivering excellence."
+    },
+    {
+      "question": "Can Terrace Point Consulting handle complex projects like pipeline integrity digs?",
+      "answer": "Absolutely! We offer full management and consulting for integrity digs, including inspections throughout access, excavation, welding, backfill, and cleanup phases. Our experience ensures projects are completed safely, efficiently, and to the highest standards."
+    },
+    {
+      "question": "What sets Terrace Point Consulting apart from other consulting firms?",
+      "answer": "Our combination of extensive industry experience, attention to detail, and commitment to quality makes us stand out. We don’t just meet expectations—we exceed them, providing tailored solutions that address the unique challenges of each project."
+    },
+    {
+      "question": "Does Terrace Point Consulting offer environmental services?",
+      "answer": "Yes, we provide environmental reclamation and remediation services to restore and protect project sites. From initial assessments to regulatory compliance, we offer sustainable solutions that prioritize environmental stewardship."
+    },
+    {
+      "question": "What is an integrity dig?",
+      "answer": "An integrity dig is a process used to inspect and maintain pipelines. It involves excavating a section of the pipeline to assess its condition, perform necessary repairs, and restore the area to its original state."
+    },
+    {
+      "question": "Why are welding inspections important?",
+      "answer": "Welding inspections are critical to ensuring the structural integrity and safety of welded components. They help identify defects, ensure compliance with industry standards, and prolong the life of structures."
+    },
+    {
+      "question": "What services are included in environmental remediation?",
+      "answer": "Environmental remediation services include soil and water sampling, contamination assessment, hazardous material removal, site restoration, and compliance with environmental regulations."
+    },
+    {
+      "question": "What certifications do your inspectors hold?",
+      "answer": "Our inspectors hold certifications such as CWI, API 1169, API 510, and CGSB Level II, ensuring they meet the highest industry standards for inspection and safety."
+    },
+    {
+      "question": "How do you ensure safety during pipeline installations?",
+      "answer": "Safety during pipeline installations is ensured through rigorous adherence to safety standards, employee training, use of advanced monitoring tools, and regular safety audits on-site."
+    },
+    {
+      "question": "What is the process for an environmental remediation project?",
+      "answer": "The process typically involves site assessment, identification of contamination, removal of hazardous materials, soil and water treatment, and restoring the site to its natural condition."
+    },
+    {
+      "question": "What non-destructive testing methods do you use?",
+      "answer": "We use several non-destructive testing methods, including Ultrasonic Testing (UT), Radiographic Testing (RT), Magnetic Particle Testing (MT), and Visual Testing (VT), to evaluate materials without causing damage."
+    },
+    {
+      "question": "What is involved in pipeline inspections?",
+      "answer": "Pipeline inspections involve visual assessments, in-line inspections using advanced tools, non-destructive testing, and ensuring compliance with industry standards and regulations."
+    },
+    {
+      "question": "How do you handle project management for complex projects?",
+      "answer": "We manage complex projects by setting clear objectives, creating detailed schedules, maintaining open communication, and employing experienced project managers to ensure all aspects are completed efficiently and safely."
+    },
+    {
+      "question": "What industries do you serve?",
+      "answer": "We serve a variety of industries, including oil and gas, construction, environmental management, and manufacturing, providing specialized inspection, remediation, and project management services."
+    },
+    {
+      "question": "Do you provide services for small projects?",
+      "answer": "Yes, we tailor our services to fit the scale of the project, whether it’s a small repair or a large-scale construction or remediation effort."
+    },
+    {
+      "question": "What are the benefits of using advanced in-line inspection tools?",
+      "answer": "Advanced in-line inspection tools allow for accurate detection of anomalies, reducing downtime, improving safety, and ensuring the long-term reliability of pipelines."
+    },
+    {
+      "question": "How do you ensure environmental compliance?",
+      "answer": "We ensure environmental compliance by following regulatory guidelines, conducting thorough assessments, and maintaining detailed documentation throughout the project."
+    }
+  ]
+}

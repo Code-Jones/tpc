@@ -1,0 +1,143 @@
+---
+import eddie from "@/images/eddie.jpg";
+import { Image } from "astro:assets";
+---
+
+<section class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+    <div class="mx-auto max-w-2xl lg:max-w-5xl">
+        <div class="m-8 text-center">
+            <h1
+                class="text-balance text-2xl font-bold tracking-tight text-neutral-800 dark:text-neutral-200 md:text-4xl md:leading-tight"
+            >
+                About Us
+            </h1>
+            <p class="mt-1 text-pretty text-neutral-600 dark:text-neutral-400">
+                Learn more about our company and what we do.
+            </p>
+        </div>
+        <div class="flex flex-col items-center gap-6 lg:flex-row lg:gap-6">
+            <div
+                class="order-2 mt-1 text-pretty text-neutral-600 dark:text-neutral-400 lg:order-1 lg:w-1/2"
+            >
+                <h3
+                    class="text-balance text-lg font-bold tracking-tight text-neutral-800 dark:text-neutral-200 md:text-4xl md:leading-tight"
+                >
+                    Terrace Point Consulting Group
+                </h3>
+                <p
+                    class="mt-1 text-pretty text-neutral-600 dark:text-neutral-400"
+                >
+                    At Terrace Point Consulting Group, we pride ourselves on
+                    being a trusted partner in the energy, construction, and
+                    environmental sectors. With over 25 years of industry
+                    experience, our team has built a reputation for delivering
+                    expert project management, welding inspections, pipeline
+                    inspections, and environmental remediation services to some
+                    of North America's leading companies, including TC Energy,
+                    Enbridge, and Cenovus. Our mission is simple: to provide
+                    reliable, high-quality solutions that ensure your projects
+                    are completed safely, efficiently, and in compliance with
+                    the highest standards. From managing complex infrastructure
+                    projects to ensuring environmental sustainability, our
+                    diverse range of expertise allows us to meet the unique
+                    needs of every client.
+                </p>
+            </div>
+            <div
+                class="about-image order-1 h-auto overflow-hidden rounded-lg lg:order-2 lg:w-1/2"
+            >
+                <Image
+                    src={eddie}
+                    alt={"Founder welding"}
+                    class="h-full w-full rounded-lg object-cover object-center"
+                    draggable={"false"}
+                    format={"avif"}
+                    loading={"eager"}
+                />
+            </div>
+        </div>
+        <div class="order-3">
+            <h3
+                class="mt-8 text-balance text-lg font-bold tracking-tight text-neutral-800 dark:text-neutral-200 md:text-4xl md:leading-tight"
+            >
+                Our Team
+            </h3>
+            <p class="mt-1 text-pretty text-neutral-600 dark:text-neutral-400">
+                Our team is made up of industry experts who are dedicated to
+                providing exceptional service and comprehensive solutions to our
+                clients. With a focus on safety, quality, and efficiency, we
+                work closely with our clients to ensure that their projects are
+                completed on time and within budget. From project managers to
+                environmental specialists, our team has the skills and
+                experience to handle a wide range of projects, from pipeline
+                construction to environmental remediation. We are committed to
+                delivering the highest level of service to our clients and pride
+                ourselves on our ability to meet their needs and exceed their
+                expectations.
+            </p>
+        </div>
+
+        <div class="order-4">
+            <h3
+                class="mt-8 text-balance text-lg font-bold tracking-tight text-neutral-800 dark:text-neutral-200 md:text-4xl md:leading-tight"
+            >
+                Why Choose Us?
+            </h3>
+            <ul
+                class="mt-1 list-inside list-disc text-pretty text-neutral-600 dark:text-neutral-400"
+            >
+                <li class="my-4 ml-8">
+                    <strong>Experience You Can Trust:</strong> Over two decades of
+                    hands-on experience in pipeline management, welding inspections,
+                    and environmental remediation.
+                </li>
+                <li class="my-4 ml-8">
+                    <strong>Quality Assurance:</strong> We are committed to delivering
+                    high-quality solutions that meet the highest industry standards.
+                </li>
+                <li class="my-4 ml-8">
+                    <strong>Commitment to Excellence:</strong> Dedicated to delivering
+                    results that exceed expectations while adhering to strict safety
+                    and quality standards.
+                </li>
+                <li class="my-4 ml-8">
+                    <strong>Industry Expertise:</strong> Our team of experts has
+                    the knowledge and skills to handle a wide range of projects in
+                    the energy, construction, and environmental sectors.
+                </li>
+                <li class="my-4 ml-8">
+                    <strong>Client-Centered Approach:</strong> We value long-term
+                    partnerships and prioritize clear communication and collaboration
+                    at every stage.
+                </li>
+            </ul>
+        </div>
+
+        <div class="order-5">
+            <h3
+                class="mt-8 text-balance text-lg font-bold tracking-tight text-neutral-800 dark:text-neutral-200 md:text-4xl md:leading-tight"
+            >
+                Our Values
+            </h3>
+            <p class="mt-1 text-pretty text-neutral-600 dark:text-neutral-400">
+                At Terrace Point Consulting Group, we believe that integrity,
+                accountability, and innovation are the foundation of our
+                success. We are passionate about supporting the industries that
+                fuel our economy while protecting the communities and
+                environments where we work. Our values guide everything we do,
+                from our commitment to safety and quality to our dedication to
+                delivering exceptional service to our clients. We are proud to
+                be a trusted partner in the energy, construction, and
+                environmental sectors and look forward to continuing to provide
+                expert-driven solutions that meet the unique needs of our
+                clients.
+            </p>
+
+            <style>
+                .about-image img {
+                    max-width: 100%;
+                }
+            </style>
+        </div>
+    </div>
+</section>

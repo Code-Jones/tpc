@@ -1,0 +1,31 @@
+---
+// Import the necessary components
+import AboutSection from "@/components/sections/misc/AboutSection.astro";
+import MainLayout from "@/layouts/MainLayout.astro";
+import { SITE } from "@data/constants";
+
+const pageTitle: string = `Contact | ${SITE.title}`;
+---
+
+<MainLayout
+    title={pageTitle}
+    structuredData={{
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": "https://terracepointconsultinggroup.com/about",
+        url: "https://terracepointconsultinggroup.com/about",
+        name: "Expert Consultation Services | Terrace Point Consulting Group",
+        description:
+            "Uniting expertise with your vision, Terrace Point Consulting Group provides exceptional service and comprehensive solutions in the hardware and construction industry, from consultation to project completion.",
+        isPartOf: {
+            "@type": "WebSite",
+            url: "https://terracepointconsultinggroup.com/",
+            name: "Terrace Point Consulting Group",
+            description:
+                "Uniting expertise with your vision, Terrace Point Consulting Group provides exceptional service and comprehensive solutions in the hardware and construction industry, from consultation to project completion.",
+        },
+        inLanguage: "en-US",
+    }}
+>
+    <AboutSection />
+</MainLayout>

@@ -1,0 +1,137 @@
+---
+// Importing necessary components
+import MainLayout from "@/layouts/MainLayout.astro";
+import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
+import CardSmall from "@components/ui/cards/CardSmall.astro";
+import CardWide from "@components/ui/cards/CardWide.astro";
+import FeaturesStatsAlt from "@components/sections/features/FeaturesStatsAlt.astro";
+import TestimonialsSectionAlt from "@components/sections/testimonials/TestimonialsSectionAlt.astro";
+
+// Importing necessary functions from Astro
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+import { SITE } from "@data/constants";
+
+// Fetching all the product related content and sorting it by main.id
+const product: CollectionEntry<"portfolio">[] = (
+  await getCollection("portfolio", ({ id }) => {
+    return id.startsWith("en/");
+  })
+).sort(
+  (a: CollectionEntry<"portfolio">, b: CollectionEntry<"portfolio">) =>
+    a.data.main.id - b.data.main.id,
+);
+
+// Define variables for page content
+const title: string = "Portfolio";
+const subTitle: string =
+  "Showcasing Our Proven Expertise in Delivering Quality, Safety, and Innovation Across Every Project.";
+
+// Testimonial data that will be rendered in the component
+const testimonials = [
+  // First testimonial data
+  {
+    content:
+      ' "Working with Terrace Point Consulting Group has been a game-changer for our construction projects. Their expertise in welding inspection and project management has given us the confidence that every detail is covered, ensuring safety and compliance. Their thorough approach has helped streamline our operations and reduce costly delays." ',
+    author: "Jason Clark",
+    role: "Site Foreman | TopBuild",
+    avatarSrc:
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80",
+    avatarAlt: "Image Description",
+  },
+  // Second testimonial data
+  {
+    content:
+      ' "As a engineer, I’ve relied on Terrace Point Consulting Group for their expert environmental remediation strategies. Their ability to tailor solutions for each project, focusing on sustainability and efficiency, has been invaluable. They go above and beyond, ensuring our spaces are not only beautiful but also environmentally responsible." ',
+    author: "Maria Gonzalez",
+    role: "Environmental Engineer | Husky Energy",
+    avatarSrc:
+      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1376&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80",
+    avatarAlt: "Image Description",
+  },
+  // Third testimonial data
+  {
+    content:
+      ' "I’ve partnered with Terrace Point Consulting Group for several pipeline inspection projects, and I can’t speak highly enough of their professionalism and expertise. Their comprehensive inspections and attention to detail give us peace of mind, knowing that every weld and connection is up to code and built to last. Their team truly cares about the success of our projects." ',
+    author: "Richard Kim",
+    role: "Engineer | TC Energy",
+    avatarSrc:
+      "https://images.unsplash.com/photo-1474176857210-7287d38d27c6?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80",
+    avatarAlt: "Image Description",
+  },
+];
+
+const pageTitle: string = `Portfolio | ${SITE.title}`;
+---
+
+<MainLayout
+  title={pageTitle}
+  structuredData={{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://terracepointconsultinggroup.com/portfolio",
+    url: "https://terracepointconsultinggroup.com/portfolio",
+    name: "Expert Consultation Services | Terrace Point Consulting Group",
+    description:
+      "Uniting expertise with your vision, Terrace Point Consulting Group provides exceptional service and comprehensive solutions in the hardware and construction industry, from consultation to project completion.",
+    isPartOf: {
+      "@type": "WebSite",
+      url: "https://terracepointconsultinggroup.com/",
+      name: "Terrace Point Consulting Group",
+      description:
+        "Uniting expertise with your vision, Terrace Point Consulting Group provides exceptional service and comprehensive solutions in the hardware and construction industry, from consultation to project completion.",
+    },
+    inLanguage: "en-US",
+  }}
+>
+  <div
+    class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
+  >
+    <div class="mb-4 flex items-center justify-between gap-8 sm:mb-8 md:mb-12">
+      <div class="flex items-center gap-12">
+        <h1
+          class="text-balance text-2xl font-bold tracking-tight text-neutral-800 dark:text-neutral-200 md:text-4xl md:leading-tight"
+        >
+          {title}
+        </h1>
+        {
+          subTitle && (
+            <p class="hidden max-w-screen-sm text-pretty text-neutral-600 dark:text-neutral-400 md:block">
+              {subTitle}
+            </p>
+          )
+        }
+      </div>
+      <PrimaryCTA title="Customer Stories" url="#testimonials" noArrow={true} />
+    </div>
+    <!--Displaying Portfolio in alternating styles. Alternative product gets different card styling.-->
+    <!--Maps through all product entries and displays them with either CardSmall or CardWide based on their position.-->
+    <section class="grid grid-cols-1 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
+      {
+        product.map((product, index) => {
+          const position = index % 4;
+          if (position === 0 || position === 3) {
+            return <CardSmall product={product} />;
+          } else {
+            return <CardWide product={product} />;
+          }
+        })
+      }
+    </section>
+  </div>
+  <!--Features statistics section-->
+  <FeaturesStatsAlt
+    title="Why Choose Terrace Point Consulting Group?"
+    subTitle="From initial consultation to project completion, Terrace Point Consulting Group provides expert guidance and professional oversight to ensure the success of your construction and environmental projects."
+    benefits={[
+      "Comprehensive project management services to keep your projects on track.",
+      "Specialized inspections to ensure quality, safety, and regulatory compliance.",
+      "Tailored environmental remediation strategies designed for sustainability and efficiency.",
+    ]}
+  />
+  <!--Testimonials section-->
+  <TestimonialsSectionAlt
+    title="What Our Customers Say"
+    testimonials={testimonials}
+  />
+</MainLayout>

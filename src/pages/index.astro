@@ -1,0 +1,139 @@
+---
+// Import the necessary components
+import MainLayout from "@/layouts/MainLayout.astro";
+import HeroSection from "@components/sections/landing/HeroSection.astro";
+import HeroSectionAlt from "@components/sections/landing/HeroSectionAlt.astro";
+import ClientsSection from "@components/sections/landing/ClientsSection.astro";
+import FeaturesGeneral from "@components/sections/features/FeaturesGeneral.astro";
+import FeaturesNavs from "@components/sections/features/FeaturesNavs.astro";
+import TestimonialsSection from "@components/sections/testimonials/TestimonialsSection.astro";
+import FAQ from "@components/sections/misc/FAQ.astro";
+import heroImage from "@images/new/sun-const.jpg";
+import faqs from "@data/faqs.json";
+import features from "@data/features.json";
+import featureImage from "@images/new/placing-gaspipe.jpg";
+import construction from "@images/construction-image.avif";
+import tools from "@images/automated-tools.avif";
+import dashboard from "@images/new/blueprints.jpg";
+
+const avatarSrcs: Array<string> = [
+  "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
+  "https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
+  "https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&&auto=format&fit=facearea&facepad=3&w=300&h=300&q=80",
+  "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
+];
+---
+
+<MainLayout>
+  <HeroSection
+    title=`Success Driven by <span
+        class="text-yellow-500 dark:text-yellow-400">Experience.</span>`
+    subTitle="With Terrace Point Consulting, you can expect exceptional consulting services in pipeline construction, maintenance, project management, and construction management. Our qualified employees are equipped to meet company expectations and goals. We offer process piping, module process skid packages information, environmental remediation, and more. With a nationwide reach for conducting projects, facility constructions, and upgrades, we bring valuable assets to the table."
+    primaryBtn="Start Exploring"
+    primaryBtnURL="/services"
+    secondaryBtn="Contact The Team"
+    secondaryBtnURL="/contact"
+    withReview={false}
+    avatars={avatarSrcs}
+    rating=`<span class="font-bold">4.8</span> / 5`
+    starCount={4}
+    reviews=`From Over <span class="font-bold">12.8k</span> Reviews`
+    src={heroImage}
+    alt="alt"
+  />
+
+  <ClientsSection
+    title="Trusted by Industry Leaders"
+    subTitle="Experience the reliability chosen by industry giants."
+  />
+
+  <FeaturesGeneral
+    title="Excellence in Every Detail"
+    subTitle="At Terrace Point Consulting Group, we deliver expert-driven solutions tailored to meet your project needs. From dedicated teams and comprehensive documentation to user-focused processes, our services are designed to ensure success at every stage of your journey. With over 25 years of industry experience, we’re your trusted partner for quality, safety, and efficiency."
+    src={featureImage}
+    alt="ScrewFast products in floating boxes"
+    features={features}
+  />
+
+  <FeaturesNavs
+    title={`Delivering <span class="text-yellow-500 dark:text-yellow-400">Unmatched Expertise</span> Across Every Project.`}
+    tabs={[
+      {
+        heading: "Innovative Tools and Solutions",
+        content:
+          "Leverage the latest industry tools and cutting-edge solutions to ensure precision, efficiency, and exceptional outcomes for every phase of your project.",
+        svg: "tools",
+        src: tools,
+        alt: "State-of-the-art tools and equipment on-site for construction",
+        first: true,
+      },
+      {
+        heading: "Nationwide and Cross-Border Reach",
+        content:
+          "Our services extend across the United States and Canada, bringing top-tier expertise wherever your projects take us.",
+        svg: "mapPin",
+        src: dashboard,
+        alt: "Map representation highlighting service areas across the US and Canada",
+        second: true,
+      },
+      {
+        heading: "Scalable for Every Project Size",
+        content:
+          "From small-scale tasks to large, complex undertakings, we have the capacity and experience to deliver outstanding results on projects of any size.",
+        svg: "house",
+        src: construction,
+        alt: "Construction site showing large-scale infrastructure development",
+      },
+    ]}
+  />
+
+  <TestimonialsSection
+    title="Your Projects, Our Priority"
+    subTitle="Terrace Point Consulting Group accelerates your projects with unmatched expertise, seamless execution, and a commitment to delivering on time and on budget."
+    testimonials={[
+      {
+        content:
+          "Terrace Point Consulting transformed how we manage pipeline projects. Their expert guidance, meticulous attention to detail, and reliable support made a real difference in our operations.",
+        author: "Michael Bennett",
+        role: "Director of Operations | EnergyCo Inc.",
+        avatarSrc:
+          "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?q=80&w=1453&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80",
+      },
+    ]}
+    statistics={[
+      {
+        count: "25 years",
+        description:
+          "of experience delivering expert solutions in construction and inspection",
+      },
+      {
+        count: "500+",
+        description: "projects completed across Canada and the United States",
+      },
+      {
+        count: "98%",
+        description:
+          "client satisfaction rate achieved through reliable and quality services",
+      },
+      {
+        count: "100%",
+        description:
+          "commitment to safety and compliance on every project we undertake",
+      },
+    ]}
+  />
+
+  <FAQ
+    title="Frequently<br />asked questions"
+    faqs={faqs}
+    primaryBtn="See More"
+    primaryBtnURL="/faq"
+    limit={5}
+  />
+
+  <HeroSectionAlt
+    title="Let's Build Together"
+    subTitle="Setting the Standard for Quality, Safety, and Reliability"
+    url="/contact"
+  />
+</MainLayout>
